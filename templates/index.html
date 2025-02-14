@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de frete</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- link da fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Cálculo de frete </h1>
+        <img src="../static/img/logo.png" alt="logo de um caminhão" style="height: 70px; width: 70px;">
+    </header>
+    <main>
+        <div class="formimg" style="display: flex; justify-content:center; align-items: flex-start;" >
+            <div class="container">
+                <form action="/" method="post">
+                    <h2>Cálculo de frete por gramas</h2>
+                    <label for="cep">Insira o CEP</label>
+                    <input type="number" name="cep" min="0" step="0.01" minlength="8" maxlength="8" required>
+                    <label for="montante">Peso em gramas</label>
+                    <input type="number" name="peso" min="0" step="0.01" required>
+                    <button type="submit">Calcular</button>
+                </form>
+                <br>
+                {% if valor_final %}
+                    <div class="resultados" style="height: 30px; width: 300px; display: flex; flex-direction: row; margin-top: 23%;">
+                        <div class="column" style="display: flex; flex-direction: column;">
+                            <label for="Valor">Valor:</label>
+                            <input style="width: 90px;" class="form-control" type="text" value=R${{valor_final}} aria-label="Disabled input example" disabled readonly>
+                        </div>
+                        <div class="column"style="display: flex; flex-direction: column; margin-left: 10px; margin-right: 10px;">
+                            <label for="Tempo">Tempo:</label>
+                            <input class="form-control"style="width: 80px;" type="text" value="{{tempo}} dias" aria-label="Disabled input example" disabled readonly>
+                        </div>
+                        <div class="column"style="display: flex; flex-direction: column;">
+                            <label for="destino">Destino:</label>
+                            <input class="form-control"style="width: 110px;" type="text" value={{destino}}-{{estado}} aria-label="Disabled input example" disabled readonly>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if erro %}
+                    <p>{{erro}}</p>
+                {% endif %}
+            </div>
+            <img src="../static/img/pacotes.jpg" alt="Figura de pacotes" class="img-fluid" style="height: 300px; margin-left: 10%;">
+        </div>
+    </main>
+    <footer>
+        <a href="https://brasilapi.com.br/docs#tag/CEP" target="_blank">API de CEP</a>
+        <p>Feito por Richard</p>
+    </footer>
+</body>
+</html>
