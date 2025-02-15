@@ -11,7 +11,7 @@ Esta aplicação solicita o CEP do destino da encomenda, consome uma API de CEP 
 * [Licença](#licença)
 ## Funcionalidades
 A principal funcionalidade é a consulta do frete, onde o usuário insere o CEP e peso em gramas e recebe o valor, tempo e cidade destino da entrega.
-![gif calculando o frete](static/img/gifs/testandofrete.gif)
+![gif calculando o frete](static/img/gifs/testando.gif)
 ## Tecnologias Utilizadas
 #### Front-end:
 ![image](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
