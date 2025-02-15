@@ -1,6 +1,6 @@
 
 ### Curso Técnico de Desenvolvimento de Sistemas - Senai Itapeva
-![Imagem de capa](../static/img/Calculadora de frete com API.mp4)
+![Imagem de capa](static/img/Calculadora%20de%20frete%20com%20API.mp4)
 # Calculadora de Frete
 **Descrição:**
 Esta aplicação solicita o CEP do destino da encomenda, consome uma API de CEP para consultar o estado do destino e então calcula o frete total deste pedido.
@@ -11,7 +11,7 @@ Esta aplicação solicita o CEP do destino da encomenda, consome uma API de CEP 
 * [Licença](#licença)
 ## Funcionalidades
 A principal funcionalidade é a consulta do frete, onde o usuário insere o CEP e peso em gramas e recebe o valor, tempo e cidade destino da entrega.
-![gif calculando o frete](../static/img/testandofrete.mp4)
+![gif calculando o frete](static/img/testandofrete.mp4)
 ## Tecnologias Utilizadas
 #### Front-end:
 ![image](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
